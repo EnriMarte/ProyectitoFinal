@@ -16,8 +16,8 @@ Lograr hacer que clínicas logren implementar exitosamente el software en su uso
 -	Recepción de paquete de datos de análisis
 -	Base de datos con historial clínico del paciente
 -	Analizar datos y dar un diagnóstico primario en base a las alteraciones
- *	 Estado de situación
- *	 Variables
+ * Estado de situación
+ * Variables
 -	Posibles procedimientos (en base al punto anterior)
 -	Al estar al juicio del médico el seguir el procedimiento indicado, en caso de no aceptar este, puede dejar por escrito (en una especie de comentario) cuál es su respuesta.
 -	Procedimientos pasados.
