@@ -1,4 +1,0 @@
-git pull
-git add NOMBREDEARCHIVO
-git commit -m 'descripción de lo que se hizo'
-git push
