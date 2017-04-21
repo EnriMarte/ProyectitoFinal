@@ -12,14 +12,12 @@ Lograr crear un software que permita análisis rápidos y precisos que simplifiq
 Lograr hacer que clínicas logren implementar exitosamente el software en su uso rutinario.
 
 ### Funciones:
-
-<li>Registración (!)</li>
-  <li>Recepción de paquete de datos de análisis</li>
-  <li>Base de datos con historial clínico del paciente</li>
+<ul>
+  <li>Sistema de credenciales con posibilidad de ingreso anónimo restringido</li>
+  <li>Base de datos de pacientes</li>
   <li>Analizar datos y dar un diagnóstico primario en base a las alteraciones: Estado de situación y variables</li>
   <li>Posibles procedimientos (en base al punto anterior)</li>
-  <li>Al estar al juicio del médico el seguir el procedimiento indicado, en caso de no aceptar este, puede dejar por escrito (en una especie de comentario) cuál es su respuesta.</li>
-  <li>Procedimientos pasados.</li>
-  <li>Análisis gráficos (según valores y procedimientos por sector deseado).</li>
-  <li>Análisis gráfico del mejoramiento o desmejoramiento del paciente.</li>
+  <li>Posibilidad de calificar el procedimiento dado</li>
+  <li>Procedimientos pasados del paciente</li>
+  <li>Análisis gráfico del mejoramiento o desmejoramiento del paciente (en base a estudios anteriores realizados dentro de las 24 horas)</li>
 </ul>
