@@ -19,5 +19,6 @@ Lograr hacer que clínicas logren implementar exitosamente el software en su uso
   <li>Posibles procedimientos (en base al punto anterior)</li>
   <li>Posibilidad de calificar el procedimiento dado</li>
   <li>Procedimientos pasados del paciente</li>
+  <li>Posibilidad de mandar a imprmir el resultado del programa.</li>
   <li>Análisis gráfico del mejoramiento o desmejoramiento del paciente (en base a estudios anteriores realizados dentro de las 24 horas)</li>
 </ul>
