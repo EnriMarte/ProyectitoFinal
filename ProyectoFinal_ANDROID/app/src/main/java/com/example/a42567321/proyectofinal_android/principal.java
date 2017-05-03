@@ -2,6 +2,7 @@ package com.example.a42567321.proyectofinal_android;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.app.Fragment;
 
 public class principal extends AppCompatActivity {
 
