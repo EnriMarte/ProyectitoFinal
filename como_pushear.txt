@@ -1,0 +1,5 @@
+git pull
+git status
+git add NOMBREDEARCHIVO
+git commit -m 'descripción de lo que se hizo'
+git push

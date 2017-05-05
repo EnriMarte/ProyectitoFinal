@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bottom bar menu by roughike-->
+<!--https://github.com/roughike/BottomBar-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Every item for another tab-->
+    <item
+        android:id="@+id/bottomBarItemOne"
+        android:icon="@drawable/ic_polymer_black_24dp"
+        android:title="Laboratorio" />
+    <item
+        android:id="@+id/bottomBarItemSecond"
+        android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
+        android:title="Pacientes" />
+    <item
+        android:id="@+id/bottomBarItemThird"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="Historial" />
+    <item
+        android:id="@+id/bottomBarItemFourth"
+        android:icon="@drawable/ic_vpn_key_black_24dp"
+        android:title="Credenciales" />
+</menu>
