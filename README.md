@@ -32,56 +32,57 @@ Lograr hacer que clínicas logren implementar exitosamente el software en su uso
 </ul>
 
 <b>ABM pacientes:</b>
-  •	Agregar, modificar y eliminar pacientes. 😊
-  •	Datos a guardar: 
-    	Nombre.
-    	Apellido.
-    	Imagen (opcional).
-    	Sexo.
-    	Altura.
-    	Edad.
-    	Peso.
-    	Tipo de sangre.
-    	Médico de cabecera.
-    	Fecha de último estudio.
-    	Ver los estudios del paciente.
-    	Gráfico evolutivo en el caso de que se le haya realizado al paciente más de dos estudios en las últimas 48 horas.
-    
+<ul>
+<li>Agregar, modificar y eliminar pacientes. 😊</li>
+<li>Datos a guardar:</li>
+  <ul>
+  <li>Nombre.</li>
+  <li>Apellido.</li>
+  <li>Imagen (opcional).</li>
+  <li>Sexo.</li>
+  <li>Altura.</li>
+  <li>Edad.</li>
+  <li>Peso.</li>
+  <li>Tipo de sangre.</li>
+  <li>Médico de cabecera.</li>
+  <li>Fecha de último estudio.</li>
+  <li>Ver los estudios del paciente.</li>
+  <li>Gráfico evolutivo en el caso de que se le haya realizado al paciente más de dos estudios en las últimas 48 horas.</li>
+  </ul>
+</ul>
+
 <b>ABM usuarios:</b>
-  •	Agregar, modificar y eliminar usuarios. 😊
-  •	Datos a guardar:
-    	Nombre.
-    	Apellido.
-    	Usuario.
-    	Contraseña.
-    	Última sesión.
-    	Matrícula.
-    	Hospital/es.
-    	Área/s.
-    	Credencial (cantidad de permisos. <i>Ejemplo: 0 = super usuario, 1 = jefe de área</i>).
-    	<i>in confirmar – inicio de sesión extra (detección de huella dactilar o reconocimiento facial).</i>
+<ul>
+  <li>Agregar, modificar y eliminar usuarios. 😊</li>
+  <li>Datos a guardar:</li>
+    <ul>
+    <li>Nombre.</li>
+    <li>Apellido.</li>
+    <li>Usuario.</li>
+    <li>Contraseña.</li>
+    <li>Última sesión.</li>
+    <li>Matrícula.</li>
+    <li>Hospital/es.</li>
+    <li>Área/s.</li>
+    <li>Credencial (cantidad de permisos. <i>Ejemplo: 0 = super usuario, 1 = jefe de área</i>).</li>
+    <li><i>Sin confirmar – inicio de sesión extra (detección de huella dactilar o reconocimiento facial).</i></li>
+    </ul>
+</ul>
 
 <b>ABM funciones:</b>
-  •	Agregar, modificar y eliminar funciones. 😊
-  •	Datos a guardar:
-    	Nombre (alias) de la función.
-    	Función.
+<ul>
+<li>Agregar, modificar y eliminar funciones. 😊</li>
+<li>Datos a guardar:</li>
+    <ul>
+    <li>Nombre (alias) de la función.</li>
+    <li>Función.</li>
+    </ul>
+</ul>
 
 <b>ABM credenciales:</b>
-  •	Agregar, modificar y eliminar credenciales. 😊
-  •	Nombre de la credencial.
-  •	A qué partes de la aplicación tiene acceso.
-<i>Los usuarios de credencial nivel n no podrán modificar ni eliminar a los usuarios de credencial n-1. El usuario de credencial 0 es el super usuario y puede modificar y eliminar al resto.</i>
-
-
-
 <ul>
-  <li>Sistema de credenciales con posibilidad de ingreso anónimo restringido</li>
-  <li>Base de datos de pacientes</li>
-  <li>Analizar datos y dar un diagnóstico primario en base a las alteraciones: Estado de situación y variables</li>
-  <li>Posibles procedimientos (en base al punto anterior)</li>
-  <li>Posibilidad de calificar el procedimiento dado</li>
-  <li>Procedimientos pasados del paciente</li>
-  <li>Posibilidad de mandar a imprmir el resultado del programa.</li>
-  <li>Análisis gráfico del mejoramiento o desmejoramiento del paciente (en base a estudios anteriores realizados dentro de las 24 horas)</li>
+  <li>Agregar, modificar y eliminar credenciales. 😊</li>
+  <li>Nombre de la credencial.</li>
+  <li>A qué partes de la aplicación tiene acceso.</li>
 </ul>
+<i>Los usuarios de credencial nivel n no podrán modificar ni eliminar a los usuarios de credencial n-1. El usuario de credencial 0 es el super usuario y puede modificar y eliminar al resto.</i>
