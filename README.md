@@ -12,6 +12,61 @@ Lograr crear un software que permita análisis rápidos y precisos que simplifiq
 Lograr hacer que clínicas logren implementar exitosamente el software en su uso rutinario.
 
 ### Funciones:
+<b>Laboratorio:</b>
+  •	Carga de datos:
+    	Manual.
+    	Detección OCR.
+    	Recepción de paquete de datos (en el caso de que la máquina tenga capacidad Bluetooth o Wifi).
+  •	Manejo de datos:
+    	Validación de datos (que estén dentro de los valores aceptables/críticos).
+    	Elección de funciones a usar y procesamiento de datos.
+  •	Presentación de datos:
+    	Resultado de funciones y diagnóstico primario (¿exacto?).
+
+<b>ABM pacientes:</b>
+  •	Agregar, modificar y eliminar pacientes. 😊
+  •	Datos a guardar: 
+    	Nombre.
+    	Apellido.
+    	Imagen (opcional).
+    	Sexo.
+    	Altura.
+    	Edad.
+    	Peso.
+    	Tipo de sangre.
+    	Médico de cabecera.
+    	Fecha de último estudio.
+    	Ver los estudios del paciente.
+    	Gráfico evolutivo en el caso de que se le haya realizado al paciente más de dos estudios en las últimas 48 horas.
+    
+<b>ABM usuarios:</b>
+  •	Agregar, modificar y eliminar usuarios. 😊
+  •	Datos a guardar:
+    	Nombre.
+    	Apellido.
+    	Usuario.
+    	Contraseña.
+    	Última sesión.
+    	Matrícula.
+    	Hospital/es.
+    	Área/s.
+    	Credencial (cantidad de permisos. <i>Ejemplo: 0 = super usuario, 1 = jefe de área</i>).
+    	<i>in confirmar – inicio de sesión extra (detección de huella dactilar o reconocimiento facial).</i>
+
+<b>ABM funciones:</b>
+  •	Agregar, modificar y eliminar funciones. 😊
+  •	Datos a guardar:
+    	Nombre (alias) de la función.
+    	Función.
+
+<b>ABM credenciales:</b>
+  •	Agregar, modificar y eliminar credenciales. 😊
+  •	Nombre de la credencial.
+  •	A qué partes de la aplicación tiene acceso.
+<i>Los usuarios de credencial nivel n no podrán modificar ni eliminar a los usuarios de credencial n-1. El usuario de credencial 0 es el super usuario y puede modificar y eliminar al resto.</i>
+
+
+
 <ul>
   <li>Sistema de credenciales con posibilidad de ingreso anónimo restringido</li>
   <li>Base de datos de pacientes</li>
