@@ -13,15 +13,23 @@ Lograr hacer que clínicas logren implementar exitosamente el software en su uso
 
 ### Funciones:
 <b>Laboratorio:</b>
-  •	Carga de datos:
-    	Manual.
-    	Detección OCR.
-    	Recepción de paquete de datos (en el caso de que la máquina tenga capacidad Bluetooth o Wifi).
-  •	Manejo de datos:
-    	Validación de datos (que estén dentro de los valores aceptables/críticos).
-    	Elección de funciones a usar y procesamiento de datos.
-  •	Presentación de datos:
-    	Resultado de funciones y diagnóstico primario (¿exacto?).
+<ul>
+<li>Carga de datos:</li>
+  <ul>
+  <li>Manual.</li>
+  <li>Detección OCR.</li>
+  <li>Recepción de paquete de datos (en el caso de que la máquina tenga capacidad Bluetooth o Wifi).</li>
+  </ul>
+<li>Manejo de datos:</li>
+  <ul>
+  <li>Validación de datos (que estén dentro de los valores aceptables/críticos).</li>
+  <li>Elección de funciones a usar y procesamiento de datos.</li>
+  </ul>
+<li>Presentación de datos:</li>
+  <ul>
+  <li>Resultado de funciones y diagnóstico primario (<i>¿exacto?</i>).</li>
+  </ul>
+</ul>
 
 <b>ABM pacientes:</b>
   •	Agregar, modificar y eliminar pacientes. 😊
