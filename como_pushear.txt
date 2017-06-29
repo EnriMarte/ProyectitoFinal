@@ -1,5 +1,11 @@
 git pull
 git status
 git add NOMBREDEARCHIVO
-git commit -m 'descripción de lo que se hizo'
+git commit -m 'descripciÃ³n de lo que se hizo'
+git push
+
+
+Git tira avisos de archivos eliminados no trackeados?
+git ls-files --deleted -z | xargs -0 git rm 
+git commit -m "Commiteando deletes..."
 git push
