@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_laboratorio"
+        icon="@drawable/ic_laboratorio"
+        title="Laborat."
+        barColorWhenSelected="#424242"/>
+    <tab
+        id="@+id/tab_pacientes"
+        icon="@drawable/ic_pacientes"
+        title="Pacientes"
+        barColorWhenSelected="#424242"/>
+    <tab
+        id="@+id/tab_usuarios"
+        icon="@drawable/ic_usuarios"
+        title="Usuarios"
+        barColorWhenSelected="#424242"/>
+    <tab
+        id="@+id/tab_credenciales"
+        icon="@drawable/ic_credenciales"
+        title="Credenc."
+        barColorWhenSelected="#424242"/>
+    <tab
+        id="@+id/tab_funciones"
+        icon="@drawable/ic_funciones"
+        title="Funciones"
+        barColorWhenSelected="#424242"/>
+</tabs>
