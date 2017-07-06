@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lblresultados"
-        android:textSize="20sp"
+        android:textSize="15sp"
         />
     <Button
         android:layout_width="match_parent"
@@ -20,10 +20,9 @@
         android:text="Buscar"
         android:textAllCaps="false"
         />
-    <TextView
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lblencontrado"
-        android:textSize="20sp"
-        />
+        android:id="@+id/Spinner"
+        ></Spinner>
 </LinearLayout>
