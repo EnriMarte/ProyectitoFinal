@@ -15,11 +15,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de la función"/>
+            android:text="Nombre de la función" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="20dp"
+            android:id="@+id/nombreFuncion"/>
     </LinearLayout>
 
 
@@ -36,12 +37,13 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="15dp"/>
 
-    <WebView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="23dp"
         android:layout_marginEnd="25dp"
-        android:id="@+id/webViewFuncion"/>
+        android:id="@+id/editTextFuncion"
+        android:editable="false"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -184,10 +186,8 @@
         <Button
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:text="Nueva var"
             android:textAllCaps="false"
-            android:textSize="12dp"
-            android:id="@+id/butNuevaVar"/>
+            android:textSize="12dp" />
         <Button
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -205,13 +205,62 @@
             android:id="@+id/butBorrar"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="5dp">
+        <Button
+            android:layout_width="41dp"
+            android:layout_height="45dp"
+            android:text="Ph"
+            android:textAllCaps="false"
+            android:id="@+id/varPh"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:text="@string/textpO2"
+            android:textAllCaps="false"
+            android:id="@+id/varO2"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:text="@string/textpO2"
+            android:textAllCaps="false"
+            android:id="@+id/varPo2"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:text="Agregar otro"
+            android:id="@+id/btnAgregarOtraVar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:hint="Nombre de variable"
+            android:id="@+id/nuevaVarText"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="Agregar"
+            android:visibility="invisible"
+            android:id="@+id/nuevaVarButton"/>
+    </LinearLayout>
+
     <Button
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:id="@+id/botonNuevaFuncion"
-        android:text="agregar nuevo"
+        android:text="continuar"
         android:fontFamily="fontFamily: sans-serif-thin"
         android:textColor="#FFFFFF"
         android:layout_gravity="right"

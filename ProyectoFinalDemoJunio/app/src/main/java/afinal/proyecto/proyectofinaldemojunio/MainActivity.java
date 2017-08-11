@@ -9,22 +9,18 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentMenuPrincipal;
 
-/*
- BAJAR TECLADO (USAR AL CREAR NUEVO X)
-
- public void cerrarTeclado()
-    {
-        View view = this.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-    }*/
-
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<String> variablesFunciones;
+    String variableEditar;
+    String funcion;
+    String nombreFuncion;
+    Map<String,String> variablesCondicionesFuncion = new HashMap<>();
+    Map<String,String> varsOCR = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,5 +57,53 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public ArrayList<String> getVariablesFunciones(){
+        return variablesFunciones;
+    }
+
+    public void setVariablesFunciones(ArrayList<String> list){
+        variablesFunciones = list;
+    }
+
+    public String getVariableEditar() {
+        return variableEditar;
+    }
+
+    public void setVariableEditar(String variableEditar) {
+        this.variableEditar = variableEditar;
+    }
+
+    public Map<String, String> getVariablesCondicionesFuncion() {
+        return variablesCondicionesFuncion;
+    }
+
+    public void addCondición(String var, String condiciones) {
+        this.variablesCondicionesFuncion.put(var, condiciones);
+    }
+
+    public Map<String, String> getVarsOCR() {
+        return varsOCR;
+    }
+
+    public void setVarsOCR(Map<String, String> varsOCR) {
+        this.varsOCR = varsOCR;
+    }
+
+    public String getFuncion() {
+        return funcion;
+    }
+
+    public void setFuncion(String funcion) {
+        this.funcion = funcion;
+    }
+
+    public String getNombreFuncion() {
+        return nombreFuncion;
+    }
+
+    public void setNombreFuncion(String nombreFuncion) {
+        this.nombreFuncion = nombreFuncion;
     }
 }

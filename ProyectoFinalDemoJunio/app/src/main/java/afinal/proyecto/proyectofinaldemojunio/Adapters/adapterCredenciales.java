@@ -13,10 +13,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import afinal.proyecto.proyectofinaldemojunio.Fragments.NuevoEditar.datosCredenciales;
 import afinal.proyecto.proyectofinaldemojunio.Model.Credencial;
+import afinal.proyecto.proyectofinaldemojunio.Model.Usuario;
 import afinal.proyecto.proyectofinaldemojunio.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -28,11 +30,13 @@ public class adapterCredenciales  extends ArrayAdapter<Credencial> {
 
     private final Context mContext;
     private final Fragment f;
+    private final ArrayList<Credencial> credenciales;
 
-    public adapterCredenciales(Context context, Fragment f, ArrayList<Credencial> usuarios) {
-        super(context, 0, usuarios);
+    public adapterCredenciales(Context context, Fragment f, ArrayList<Credencial> credenciales) {
+        super(context, 0, credenciales);
         mContext = context;
         this.f=f;
+        this.credenciales = credenciales;
     }
 
 
@@ -86,5 +90,11 @@ public class adapterCredenciales  extends ArrayAdapter<Credencial> {
     public int getRandomColor(){
         Random rnd = new Random();
         return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+    }
+
+    public void notifyDataChanged(List<Credencial> list){
+        this.credenciales.clear();
+        this.credenciales.addAll(list);
+        this.notifyDataSetChanged();
     }
 }

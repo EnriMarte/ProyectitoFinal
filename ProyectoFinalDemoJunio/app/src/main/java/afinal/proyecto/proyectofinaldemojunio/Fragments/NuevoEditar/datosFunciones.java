@@ -2,6 +2,7 @@ package afinal.proyecto.proyectofinaldemojunio.Fragments.NuevoEditar;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -9,10 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import static java.lang.Math.*;
 
 import com.irozon.sneaker.Sneaker;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentConfirFunc;
+import afinal.proyecto.proyectofinaldemojunio.MainActivity;
 import afinal.proyecto.proyectofinaldemojunio.Model.Funcion;
 import afinal.proyecto.proyectofinaldemojunio.R;
 
@@ -23,51 +36,70 @@ import afinal.proyecto.proyectofinaldemojunio.R;
 public class datosFunciones extends Fragment {
 
     public int editarONuevo;
+    ArrayList<String> vars = new ArrayList<String>();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.datos_funciones, container, false);
+        final View view = inflater.inflate(R.layout.datos_funciones, container, false);
 
         Button button = (Button)view.findViewById(R.id.botonNuevaFuncion);
         final Funcion funcion = new Funcion();
+        final EditText editText = (EditText) view.findViewById(R.id.editTextFuncion);
 
         if (editarONuevo == 0){
             button.setText("Guardar cambios");
         }
 
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editarONuevo == 0){
-                    Sneaker.with(getActivity())
-                            .setTitle("Cambios guardados")
-                            .setDuration(3000)
-                            .setMessage("Los cambios se realizaron satisfactoriamente")
-                            .setIcon(R.drawable.ic_cloud_done)
-                            .sneak(R.color.colorAccent);
-                }else{
-                    Sneaker.with(getActivity())
-                            .setTitle("Función creada")
-                            .setDuration(3000)
-                            .setMessage("Se ha agregado la función a la base de datos")
-                            .setIcon(R.drawable.ic_cloud_done)
-                            .sneak(R.color.colorAccent);
+                TextView txtNombreFunc = (EditText)view.findViewById(R.id.nombreFuncion);
+                if (!txtNombreFunc.getText().toString().equals("") &&
+                        !editText.getText().toString().equals("")) {
+                    if (editarONuevo == 0) {
+                        Sneaker.with(getActivity())
+                                .setTitle("Cambios guardados")
+                                .setDuration(3000)
+                                .setMessage("Los cambios se realizaron satisfactoriamente")
+                                .setIcon(R.drawable.ic_cloud_done)
+                                .sneak(R.color.colorAccent);
+                    } else {
+                        MainActivity parent = (MainActivity) getActivity();
+                        parent.setVariablesFunciones(vars);
+                        parent.setFuncion(editText.getText().toString());
+                        parent.setNombreFuncion(txtNombreFunc.getText().toString());
+
+                        if (vars.size() == 0)
+                            getFragmentManager().beginTransaction()
+                                    .replace(R.id.fragment_container,
+                                            new fragmentConfirFunc(), "confVarsTag")
+                                    .addToBackStack("confVarsTag").commit();
+                         else
+                        getFragmentManager().beginTransaction()
+                                .replace(R.id.fragment_container,
+                                        new condicionesFunciones(), "condicionesTag")
+                                .addToBackStack("condicionesTag").commit();
+                    }
+                } else {
+                    Toast.makeText(getActivity(), "Complete los campos", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
-        final WebView webView = (WebView)view.findViewById(R.id.webViewFuncion);
-
         Button b = (Button)view.findViewById(R.id.butRaizN);
         b.setText(Html.fromHtml("<sup><small>4</small></sup>√x"));
+
+        funcion.setFuncion("");
 
         view.findViewById(R.id.butNum0).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "0");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -75,7 +107,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "1");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -83,7 +115,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "2");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
 
             }
         });
@@ -92,7 +124,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "3");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -100,7 +132,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "4");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -108,14 +140,14 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "5");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
         view.findViewById(R.id.butNum6).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "6");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -123,7 +155,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "7");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -131,7 +163,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "8");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -139,7 +171,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "9");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -147,7 +179,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^2");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -155,7 +187,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^3");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -163,7 +195,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -171,7 +203,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^(1/2)");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -179,7 +211,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^(1/3)");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -187,7 +219,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "^(1/4)");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -195,7 +227,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "(");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -203,7 +235,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + ")");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -211,7 +243,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "+");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -219,7 +251,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "-");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -227,23 +259,19 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + ".");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
-        view.findViewById(R.id.butNuevaVar).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.nuevaVarButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!funcion.getFuncion().contains("x")){
-                    funcion.setFuncion(funcion.getFuncion() + "x");
-                } else if (!funcion.getFuncion().contains("y")){
-                    funcion.setFuncion(funcion.getFuncion() + "y");
-                } else if (!funcion.getFuncion().contains("z")){
-                    funcion.setFuncion(funcion.getFuncion() + "z");
-                } else if (!funcion.getFuncion().contains("a")){
-                    funcion.setFuncion(funcion.getFuncion() + "a");
+                EditText nuevaVar = (EditText)view.findViewById(R.id.nuevaVarText);
+                if (!vars.contains(nuevaVar.getText().toString())){
+                    vars.add(nuevaVar.getText().toString());
                 }
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                funcion.setFuncion(funcion.getFuncion() + nuevaVar.getText().toString());
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -251,7 +279,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "/");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -259,7 +287,7 @@ public class datosFunciones extends Fragment {
             @Override
             public void onClick(View v) {
                 funcion.setFuncion(funcion.getFuncion() + "*");
-                webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                editText.setText(funcion.getFuncion());
             }
         });
 
@@ -270,7 +298,53 @@ public class datosFunciones extends Fragment {
                 if (temp.length() > 0) {
                     temp = temp.substring(0, temp.length() - 1);
                     funcion.setFuncion(temp);
-                    webView.loadData(funcion.getFuncion(), "text/html; charset=utf-8", "utf-8");
+                    editText.setText(funcion.getFuncion());
+                }
+            }
+        });
+
+        view.findViewById(R.id.varO2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                funcion.setFuncion(funcion.getFuncion() + "O2");
+                editText.setText(funcion.getFuncion());
+                if (!vars.contains("O2")){
+                    vars.add("O2");
+                }
+            }
+        });
+
+        view.findViewById(R.id.varPh).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                funcion.setFuncion(funcion.getFuncion() + "pH");
+                editText.setText(funcion.getFuncion());
+                if (!vars.contains("pH")){
+                    vars.add("pH");
+                }
+            }
+        });
+
+        view.findViewById(R.id.varPo2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                funcion.setFuncion(funcion.getFuncion() + "pO2");
+                editText.setText(funcion.getFuncion());
+                if (!vars.contains("pO2")){
+                    vars.add("pO2");
+                }
+            }
+        });
+
+        view.findViewById(R.id.btnAgregarOtraVar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (view.findViewById(R.id.nuevaVarText).getVisibility() == View.INVISIBLE){
+                    view.findViewById(R.id.nuevaVarText).setVisibility(View.VISIBLE);
+                    view.findViewById(R.id.nuevaVarButton).setVisibility(View.VISIBLE);
+                } else {
+                    view.findViewById(R.id.nuevaVarText).setVisibility(View.INVISIBLE);
+                    view.findViewById(R.id.nuevaVarButton).setVisibility(View.INVISIBLE);
                 }
             }
         });

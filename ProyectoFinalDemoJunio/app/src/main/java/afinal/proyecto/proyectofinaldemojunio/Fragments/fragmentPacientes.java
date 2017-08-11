@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.irozon.sneaker.Sneaker;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -82,7 +84,9 @@ public class fragmentPacientes extends Fragment{
     }
 
 
+    /*********************************************************************************************/
     /******************************************CONSULTAS******************************************/
+    /*********************************************************************************************/
 
 
     public void AsyncGetAllPacientes() {
@@ -91,7 +95,7 @@ public class fragmentPacientes extends Fragment{
 
 
     ArrayList<Paciente> parseResultGSON(String resultado) {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
         Paciente[] arr = gson.fromJson(resultado, Paciente[].class);
         return new ArrayList<>(Arrays.asList(arr));
     }
@@ -116,9 +120,13 @@ public class fragmentPacientes extends Fragment{
 
         @Override
         protected ArrayList<Paciente> doInBackground(Void... arg0) {
-            HttpHandler sh = new HttpHandler();
+            HttpHandler sh = new HttpHandler(getActivity());
+            String jsonStr;
 
-            String jsonStr = sh.makeServiceCall(url);
+            if (sh.makeServiceCall(url) != null)
+                jsonStr = sh.makeServiceCall(url);
+            else
+                return null;
 
             Log.e(TAG, "Response from url: " + jsonStr);
 
@@ -126,7 +134,8 @@ public class fragmentPacientes extends Fragment{
                 try {
                     listaTemp = parseResultGSON(jsonStr);
                 } catch (final Exception e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+                    Log.e(TAG, "Json parsing error: "
+                            + e.getMessage());
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -137,19 +146,10 @@ public class fragmentPacientes extends Fragment{
                         }
                     });
                 }
-            } else {
-                Log.e(TAG, "Couldn't get json from server.");
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(getActivity(),
-                                "Couldn't get json from server. Check LogCat for possible errors!",
-                                Toast.LENGTH_LONG)
-                                .show();
-                    }
-                });
             }
+
             return listaTemp;
+
         }
         @Override
         protected void onPostExecute(ArrayList<Paciente> result) {
@@ -158,7 +158,17 @@ public class fragmentPacientes extends Fragment{
                 pDialog.dismiss();
             }
             listaPacientes = listaTemp;
-            ap.notifyDataChanged(listaPacientes);
+
+            if (listaPacientes != null) {
+                ap.notifyDataChanged(listaPacientes);
+            } else {
+                Sneaker.with(getActivity())
+                        .setTitle("¡Error! :(")
+                        .setDuration(5000)
+                        .setHeight(77)
+                        .setMessage("Hubo un error al recuperar los pacientes.")
+                        .sneakError();
+            }
         }
     }
 }

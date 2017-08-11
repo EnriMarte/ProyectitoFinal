@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import afinal.proyecto.proyectofinaldemojunio.Fragments.NuevoEditar.datosFunciones;
 import afinal.proyecto.proyectofinaldemojunio.Model.Funcion;
@@ -24,11 +25,13 @@ public class adapterFunciones extends ArrayAdapter<Funcion> {
 
     private final Context mContext;
     private final Fragment f;
+    private final ArrayList<Funcion>funciones;
 
-    public adapterFunciones(Context context, Fragment f, ArrayList<Funcion> usuarios) {
-        super(context, 0, usuarios);
+    public adapterFunciones(Context context, Fragment f, ArrayList<Funcion> funciones) {
+        super(context, 0, funciones);
         mContext = context;
         this.f = f;
+        this.funciones = funciones;
     }
 
 
@@ -51,23 +54,6 @@ public class adapterFunciones extends ArrayAdapter<Funcion> {
         funcionview.setText(funcion.getFuncion());
 
         String pars = "";
-
-        if (funcion.getVariables().length > 0){
-            for (int i = 0; i < funcion.getVariables().length; i++){
-                if (i == 0){
-                    pars+= "x=" + funcion.getVariables()[i];
-                } else if (i == 1 && funcion.getVariables()[i] != null) {
-                    pars+= " | y=" + funcion.getVariables()[i];
-                } else if (i == 2 && funcion.getVariables()[i] != null) {
-                    pars+= " | z=" + funcion.getVariables()[i] ;
-                } else if (i == 3 && funcion.getVariables()[i] != null){
-                    pars+= " | a=" + funcion.getVariables()[i];
-                }
-            }
-            parametros.setText(pars);
-        } else {
-            parametros.setText("Sin parámetros");
-        }
 
 
         ImageButton editar = (ImageButton)convertView.findViewById(R.id.editAbm);
@@ -96,5 +82,11 @@ public class adapterFunciones extends ArrayAdapter<Funcion> {
         }
 
         return convertView;
+    }
+
+    public void notifyDataChanged(List<Funcion> list){
+        this.funciones.clear();
+        this.funciones.addAll(list);
+        this.notifyDataSetChanged();
     }
 }

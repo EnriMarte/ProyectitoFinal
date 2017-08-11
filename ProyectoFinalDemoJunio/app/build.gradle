@@ -42,8 +42,14 @@ dependencies {
     compile 'org.apache.httpcomponents:httpcore:4.4.1'
     compile 'org.apache.httpcomponents:httpclient:4.5'
 
+    //Librería de conexión
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+
     //Librería del GSON raro
     compile group: 'com.google.code.gson', name: 'gson', version: '2.4'
+
+    //Librería de Google Services, para el OCR
+    compile 'com.google.android.gms:play-services-vision:9.8.0'
 
     //Forzar uso de la misma librería gráfica para evitar errores. ¿Funciona? Perhaps.
     testCompile 'junit:junit:4.12'

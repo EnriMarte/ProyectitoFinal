@@ -96,6 +96,7 @@ public class datosPacientes extends Fragment{
                         Sneaker.with(getActivity())
                                 .setTitle("Cambios guardados")
                                 .setDuration(3000)
+                                .setHeight(77)
                                 .setMessage("Los cambios se realizaron satisfactoriamente")
                                 .setIcon(R.drawable.ic_cloud_done)
                                 .sneak(R.color.colorAccent);
@@ -103,6 +104,7 @@ public class datosPacientes extends Fragment{
                         Sneaker.with(getActivity())
                                 .setTitle("Paciente agregado")
                                 .setDuration(3000)
+                                .setHeight(77)
                                 .setMessage("Se ha agregado el paciente a la base de datos")
                                 .setIcon(R.drawable.ic_cloud_done)
                                 .sneak(R.color.colorAccent);

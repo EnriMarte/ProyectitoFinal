@@ -95,11 +95,16 @@ public class Paciente {
     public void setTipoSangre(String tipoSangre) {
         this.tipoSangre = tipoSangre;
     }
+    public int getidPacientes() {
+        return idPacientes;
+    }
+    public void setIdPacientes(int idPacientes) { this.idPacientes = idPacientes; }
     //public Drawable getImagen() {return imagen;}
    // public void setImagen(Drawable imagen) {
    //     this.imagen = imagen;
     //}
 
+    int idPacientes;
     String nombre;
     String apellido;
     Integer edad;

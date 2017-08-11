@@ -37,14 +37,7 @@ public class tabMenu extends Fragment {
         final View view = inflater.inflate(R.layout.tab_menu, container, false);
 
         final BottomBar bottomBar = (BottomBar)view.findViewById(R.id.bottomBar);
-/*
-        if (tabClickeado == 4) {
-            bottomBar.selectTabAtPosition(3, false);
-        }
-        else {
-            bottomBar.selectTabAtPosition(tabClickeado, false);
-        }
-*/
+
         bottomBar.selectTabAtPosition(tabClickeado, false);
 
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
@@ -75,25 +68,31 @@ public class tabMenu extends Fragment {
 
                 if(!llegaDesdeMenuPrincipal) {
                     if (tabId == R.id.tab_laboratorio) {
-                        ft.replace(R.id.fragment_container, new fragmentLaboratorio(), "laboratorioTag").commit();
+                        ft.replace(R.id.fragment_container, new fragmentLaboratorio(), "laboratorioTag");
+                        ft.addToBackStack("laboratorioTag");
                         getActivity().setTitle("Laboratorio");
                     }
                     if (tabId == R.id.tab_pacientes) {
-                        ft.replace(R.id.fragment_container, new fragmentPacientes(), "pacientesTag").commit();
+                        ft.replace(R.id.fragment_container, new fragmentPacientes(), "pacientesTag");
+                        ft.addToBackStack("pacientesTag");
                         getActivity().setTitle("Pacientes");
                     }
                     if (tabId == R.id.tab_usuarios) {
-                        ft.replace(R.id.fragment_container, new fragmentUsuarios(), "usuariosTag").commit();
+                        ft.replace(R.id.fragment_container, new fragmentUsuarios(), "usuariosTag");
+                        ft.addToBackStack("usuariosTag");
                         getActivity().setTitle("Usuarios");
                     }
                     if (tabId == R.id.tab_credenciales) {
-                        ft.replace(R.id.fragment_container, new fragmentCredenciales(), "credencialesTag").commit();
+                        ft.replace(R.id.fragment_container, new fragmentCredenciales(), "credencialesTag");
+                        ft.addToBackStack("credencialesTag");
                         getActivity().setTitle("Credenciales");
                     }
                     if (tabId == R.id.tab_funciones) {
-                        ft.replace(R.id.fragment_container, new fragmentFunciones(), "funcionesTag").commit();
+                        ft.replace(R.id.fragment_container, new fragmentFunciones(), "funcionesTag");
+                        ft.addToBackStack("funcionesTag");
                         getActivity().setTitle("Funciones");
                     }
+                    ft.commit();
                 }
                 llegaDesdeMenuPrincipal = false;
             }
