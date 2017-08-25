@@ -1,5 +1,5 @@
 ## Descripcion: 
-ProyectoFinalDemoJunio.R.android.Activity.MainActivity.getNombreApp(); es un sistema que tiene por objetivo recoger datos y variables de los estudios de los gases en sangre arterial, mediante carga manual o por detección por cámara para poder dar un diagnóstico rápido y preciso evitando que el usuario tenga que hacer cálculos de más.
+ProyectoFinalDemoJunio.R.android.Activity.MainActivity.getNombreApp(); es un sistema que tiene por objetivo recoger datos y variables de los estudios de los gases en sangre arterial, mediante carga manual o por detección de cámara para poder dar un diagnóstico rápido y preciso evitando que el usuario tenga que hacer cálculos de más.
 
 La aplicación permite la carga y edición de los diagnósticos que se utilizarán y las funciones que las componen, logrando que sea adaptable a posibles cambios a futuros en el área de la medicina.
 
