@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\ianfr\\Desktop\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\ianfr\\.android\\build-cache\\50f04bbf9cf8daaf6c9dc31a87d70fa627c5a01a\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "Z:\\6IC\\prog\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\42567321\\.android\\build-cache\\4780141920f73a7b181b464e680382cecaa85064\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\ianfr\\Desktop\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\ianfr\\.android\\build-cache\\50f04bbf9cf8daaf6c9dc31a87d70fa627c5a01a\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ianfr\\Desktop\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\ianfr\\.android\\build-cache\\50f04bbf9cf8daaf6c9dc31a87d70fa627c5a01a\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "Z:\\6IC\\prog\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\42567321\\.android\\build-cache\\4780141920f73a7b181b464e680382cecaa85064\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\ianfr\\Desktop\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\ianfr\\.android\\build-cache\\50f04bbf9cf8daaf6c9dc31a87d70fa627c5a01a\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "Z:\\6IC\\prog\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\42567321\\.android\\build-cache\\4780141920f73a7b181b464e680382cecaa85064\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "Z:\\6IC\\prog\\TP8\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\42567321\\.android\\build-cache\\4780141920f73a7b181b464e680382cecaa85064\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    }
+]

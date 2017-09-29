@@ -102,7 +102,7 @@ public class fragmentUsuarios extends Fragment{
             super.onPreExecute();
 
             pDialog = new ProgressDialog(getActivity());
-            pDialog.setMessage("Espere por favor...");
+            pDialog.setMessage("Partiendo las aguas a la mitad...");
             pDialog.setIndeterminate(false);
             pDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             pDialog.setCancelable(false);

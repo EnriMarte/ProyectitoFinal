@@ -50,7 +50,6 @@ public class adapterVariablesEditar extends ArrayAdapter<String> {
 
         Spinner condicionador = (Spinner) convertView.findViewById(R.id.spinnerCondicionador);
         Spinner operador = (Spinner) convertView.findViewById(R.id.spinnerOperador);
-        EditText comparador = (EditText) convertView.findViewById(R.id.editTextComparador);
         TextView nombreVar = (TextView) convertView.findViewById(R.id.nombreVar);
 
         nombreVar.setText(var);

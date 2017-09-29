@@ -163,21 +163,21 @@ public class fragmentOCR extends Fragment {
     {
         String detectadomin = texto.toLowerCase().trim();
         detectadomin = detectadomin.replaceAll(" ","");
-
+        detectadomin = detectadomin.replaceAll("[\"()*&^$+#=@!'-]","");
         String aux = "";
         for (int i = 0; i < 4; i++) {
             switch (i){
                 case 0:
-                    aux = encontrar("ph:{1}+[6-8]{1}+,{1}+[0-9]{2}",detectadomin);
+                    aux = encontrar("ph+[0-9]{1,10}+(,|.){1}+[0-9]{2}",detectadomin);
                     break;
                 case 1:
-                    aux = encontrar("nahco3:{1}+[0-9]{2}+,{1}+[0-9]{2}",detectadomin);
+                    aux = encontrar("nahco3+[0-9]{2}+(,|.){1}+[0-9]{2}",detectadomin);
                     break;
                 case 2:
-                    aux = encontrar("po2:{1}+[0-9]{2}+,{1}+[0-9]{2}",detectadomin);
+                    aux = encontrar("po2+[0-9]{2}+(,|.){1}+[0-9]{2}",detectadomin);
                     break;
                 case 3:
-                    aux = encontrar("pco2:{1}+[0-9]{2}+,{1}+[0-9]{2}",detectadomin);
+                    aux = encontrar("pco2+[0-9]{2}+(,|.){1}+[0-9]{2}",detectadomin);
                     break;
             }
 

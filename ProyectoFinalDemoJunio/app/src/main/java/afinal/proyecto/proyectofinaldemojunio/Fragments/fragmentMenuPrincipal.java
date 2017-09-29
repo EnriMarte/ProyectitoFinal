@@ -13,7 +13,6 @@ import com.hitomi.cmlibrary.CircleMenu;
 import com.hitomi.cmlibrary.OnMenuSelectedListener;
 import android.support.v7.app.ActionBar;
 
-import afinal.proyecto.proyectofinaldemojunio.MainActivity;
 import afinal.proyecto.proyectofinaldemojunio.R;
 
 public class fragmentMenuPrincipal extends Fragment {
@@ -33,6 +32,7 @@ public class fragmentMenuPrincipal extends Fragment {
                 .addSubMenu(Color.parseColor("#00E0E0"), R.drawable.ic_usuarios)
                 .addSubMenu(Color.parseColor("#A7FA00"), R.drawable.ic_credenciales)
                 .addSubMenu(Color.parseColor("#FFD900"), R.drawable.ic_funciones)
+                .addSubMenu(Color.parseColor("#b942f4"), R.drawable.ic_healing)
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                     @Override
                     public void onMenuSelected(int i) {
@@ -73,6 +73,11 @@ public class fragmentMenuPrincipal extends Fragment {
                                         ft.replace(R.id.fragment_container, new fragmentFunciones(), "funcionesTag");
                                         getActivity().setTitle("Funciones");
                                         ft.addToBackStack("funcionesTag");
+                                        break;
+                                    case 5:
+                                        ft.replace(R.id.fragment_container, new fragmentDiagnosticos(), "diagnosticosTag");
+                                        getActivity().setTitle("Diagnósticos");
+                                        ft.addToBackStack("diagnosticosTag");
                                         break;
                                 }
 

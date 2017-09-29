@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\Desktop\TP7_2\app\libs\cocos2d-android.v0.82.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0bd2a4a7260db13d42c683d262bb5243b3b2ed87">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\cocos2d-android.v0.82_a35ca4896715ad86ec5b26516764f98c87d951b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\b7c2e7aac08356b81e1822a50dfeeee9313a0b01\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_b6cb68e1ed37f2e142f2567e9011a7c7a14f6a80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\e6cd9d353434d8100e1165b62af698a92f1e7274\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_933a2e28180feb28e006933e8064930721751d69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\3ca957dee9e037f66efa2a9c27e313fb709119e4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_5d21bda08aaeab7abf35f9f539b0df0314c57b9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_2d760e18a9e4d3081e0df0a674ee4eed0615e49c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\5ac4a78e6a652e85f730d94a5cc6990c93becd9e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_d2a168ef1c258f35c775360e3ba0921e5747a985.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\25cab64fbf3106676a4fd60a4538fd77b0203d36\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_2b3aac2f43e0ad856d17056f4982735dd1e9b503.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_3126bf9888156f4675a0047dc65cd19250c40b3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_c6b5de09536a34e96f75f15a00aaf14f858461b0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\62a470b0700d9142d2d8796e0db8daa708a7700b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_2c3edb3091fff23bc3f82512b951151d1a34f5f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\ec17f9fd8db2773598a24bf0c1995ec37a28a96d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_538cd21325734fe7a2d99f85ed3e6745b48fd279.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\c981a918736595c12e0a18ed64155cf3baecb86a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_d89ffcb2cf09d581a6caae12ef3fb2fd63dab1f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\ianfr\.android\build-cache\853112da54742557f3bf532751d0099232679998\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\ianfr\Desktop\TP7_2\app\build\intermediates\pre-dexed\debug\classes_02df751ece0508ce12423d55a1c5cb080bab7fd0.jar" />
+    </item>
+
+</items>

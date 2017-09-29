@@ -1,0 +1,87 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:3:5-42
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\853112da54742557f3bf532751d0099232679998\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\3ca957dee9e037f66efa2a9c27e313fb709119e4\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\ec17f9fd8db2773598a24bf0c1995ec37a28a96d\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\5ac4a78e6a652e85f730d94a5cc6990c93becd9e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\62a470b0700d9142d2d8796e0db8daa708a7700b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\e6cd9d353434d8100e1165b62af698a92f1e7274\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\c981a918736595c12e0a18ed64155cf3baecb86a\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\b7c2e7aac08356b81e1822a50dfeeee9313a0b01\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ianfr\.android\build-cache\25cab64fbf3106676a4fd60a4538fd77b0203d36\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.a42567321.tp7_2.MainActivity
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:12:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\853112da54742557f3bf532751d0099232679998\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\3ca957dee9e037f66efa2a9c27e313fb709119e4\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\ec17f9fd8db2773598a24bf0c1995ec37a28a96d\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\5ac4a78e6a652e85f730d94a5cc6990c93becd9e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\62a470b0700d9142d2d8796e0db8daa708a7700b\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\e6cd9d353434d8100e1165b62af698a92f1e7274\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\c981a918736595c12e0a18ed64155cf3baecb86a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\b7c2e7aac08356b81e1822a50dfeeee9313a0b01\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ianfr\.android\build-cache\25cab64fbf3106676a4fd60a4538fd77b0203d36\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\ianfr\Desktop\TP7_2\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\853112da54742557f3bf532751d0099232679998\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\3ca957dee9e037f66efa2a9c27e313fb709119e4\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\ec17f9fd8db2773598a24bf0c1995ec37a28a96d\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\5ac4a78e6a652e85f730d94a5cc6990c93becd9e\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\62a470b0700d9142d2d8796e0db8daa708a7700b\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\e6cd9d353434d8100e1165b62af698a92f1e7274\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\c981a918736595c12e0a18ed64155cf3baecb86a\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\b7c2e7aac08356b81e1822a50dfeeee9313a0b01\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\ianfr\.android\build-cache\6251ace837d49beb70e2fcdb90511a9d8cd719e3\output\AndroidManifest.xml:26:9-47

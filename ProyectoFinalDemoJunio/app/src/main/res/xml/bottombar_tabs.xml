@@ -25,4 +25,10 @@
         icon="@drawable/ic_funciones"
         title="Funciones"
         barColorWhenSelected="#424242"/>
+
+    <tab
+        id="@+id/tab_diagnosticos"
+        icon="@drawable/ic_healing"
+        title="Diagnóst."
+        barColorWhenSelected="#424242"/>
 </tabs>

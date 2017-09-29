@@ -11,11 +11,6 @@ import android.view.ViewGroup;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentCredenciales;
-import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentFunciones;
-import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentLaboratorio;
-import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentPacientes;
-import afinal.proyecto.proyectofinaldemojunio.Fragments.fragmentUsuarios;
 import afinal.proyecto.proyectofinaldemojunio.R;
 
 
@@ -63,6 +58,9 @@ public class tabMenu extends Fragment {
                         case 4:
                             tabId = R.id.tab_funciones;
                             break;
+                        case 5:
+                            tabId = R.id.tab_diagnosticos;
+                            break;
                     }
                 }
 
@@ -91,6 +89,11 @@ public class tabMenu extends Fragment {
                         ft.replace(R.id.fragment_container, new fragmentFunciones(), "funcionesTag");
                         ft.addToBackStack("funcionesTag");
                         getActivity().setTitle("Funciones");
+                    }
+                    if (tabId == R.id.tab_diagnosticos) {
+                        ft.replace(R.id.fragment_container, new fragmentDiagnosticos(), "diagnosticosTag");
+                        ft.addToBackStack("diagnosticosTag");
+                        getActivity().setTitle("Diagnósticos");
                     }
                     ft.commit();
                 }

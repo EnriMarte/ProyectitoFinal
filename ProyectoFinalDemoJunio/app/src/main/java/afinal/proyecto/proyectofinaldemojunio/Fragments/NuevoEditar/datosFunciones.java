@@ -52,8 +52,6 @@ public class datosFunciones extends Fragment {
             button.setText("Guardar cambios");
         }
 
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
