@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="15dp"
+            android:textSize="15dp"
+            android:lines="1"
+            android:text="Tocar para configurar la variable [NOMBRE_VAR]"
+            android:id="@+id/txtSelectVariable"/>
+        <ImageView
+            android:layout_marginTop="9dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_next"
+            android:tint="@color/bb_darkBackgroundColor"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+</LinearLayout>
