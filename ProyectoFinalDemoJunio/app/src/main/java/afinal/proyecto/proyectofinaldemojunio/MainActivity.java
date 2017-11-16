@@ -1,8 +1,12 @@
 package afinal.proyecto.proyectofinaldemojunio;
 
 
+import android.Manifest;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -42,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
         //todo: armar clase, fragment y vista "login"
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-
                 getFragmentManager().popBackStackImmediate();
 
                 if (getFragmentManager().findFragmentByTag("menuPrincipalTag") != null &&
@@ -54,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportActionBar() != null) {
                         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
                 }
-
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }

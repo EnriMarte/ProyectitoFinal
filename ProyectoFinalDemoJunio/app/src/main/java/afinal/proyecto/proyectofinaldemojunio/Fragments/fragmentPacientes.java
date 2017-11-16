@@ -56,7 +56,7 @@ public class fragmentPacientes extends Fragment{
             {
                 Paciente p = listaPacientes.get(position);
 
-                detallesPaciente detallesPacienteFragmento = new detallesPaciente();;
+                detallesPaciente detallesPacienteFragmento = new detallesPaciente();
                 detallesPacienteFragmento.setPaciente(p);
 
                 MainActivity ma = (MainActivity) getActivity();
@@ -74,7 +74,6 @@ public class fragmentPacientes extends Fragment{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(getActivity(), "¡No habilitado!", Toast.LENGTH_SHORT).show();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 datosPacientes fr = new datosPacientes();
                 fr.editarONuevo = 1;

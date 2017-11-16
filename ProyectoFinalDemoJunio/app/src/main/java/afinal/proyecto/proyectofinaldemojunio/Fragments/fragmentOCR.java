@@ -9,7 +9,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.util.SparseArray;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -24,12 +23,8 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,8 +43,6 @@ public class fragmentOCR extends Fragment {
     StringBuilder stringBuilder = new StringBuilder();
     String detectado;
     Map<String, String> varsOCR = new HashMap<>();
-    Timer timer = new Timer();
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -79,8 +72,6 @@ public class fragmentOCR extends Fragment {
 
         cameraView = (SurfaceView) view.findViewById(R.id.surface_view);
         textView = (TextView) view.findViewById(R.id.text_view);
-
-
 
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getActivity()).build();
         if (!textRecognizer.isOperational()) {
@@ -128,14 +119,6 @@ public class fragmentOCR extends Fragment {
                 @Override
                 public void receiveDetections(Detector.Detections<TextBlock> detections) {
 
-                    TimerTask task = new TimerTask() {
-                        @Override
-                        public void run() {
-                           stop();
-                        }
-                    };
-                    timer.schedule(task,4000);
-
                     final SparseArray<TextBlock> items = detections.getDetectedItems();
                     if (items.size() != 0) {
                         textView.post(new Runnable() {
@@ -154,7 +137,7 @@ public class fragmentOCR extends Fragment {
             });
         }
 
-        /*Button button = (Button) view.findViewById(R.id.stopOCR);
+        Button button = (Button) view.findViewById(R.id.stopOCR);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -171,10 +154,11 @@ public class fragmentOCR extends Fragment {
                                 new fragmentLaboratorio(), "laboratorioTag")
                         .addToBackStack("laboratorioTag").commit();
             }
-        });*/
+        });
 
         return view;
     }
+
     public void buscar(String texto)
     {
         String detectadomin = texto.toLowerCase().trim();
@@ -221,16 +205,6 @@ public class fragmentOCR extends Fragment {
 
     public void stop()
     {
-        detectado = stringBuilder.toString();
-        buscar(detectado);
-
-        MainActivity myParent = (MainActivity)getActivity();
-        myParent.setVarsOCR(varsOCR);
-
-        getFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container,
-                        new fragmentLaboratorio(), "laboratorioTag")
-                .addToBackStack("laboratorioTag").commit();
         cameraSource.stop();
     }
 }

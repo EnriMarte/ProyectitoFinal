@@ -61,7 +61,7 @@ public class fragmentCredenciales extends Fragment{
 
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.fragment_container, detallesCredencialFragment, "detallesCredencialTag");
+                ft.replace(R.id.fragment_container, detallesCredencialFragment, "detallesCredencialTag").addToBackStack("detallesCredencialesTag");
                 ft.commit();
             }
         });

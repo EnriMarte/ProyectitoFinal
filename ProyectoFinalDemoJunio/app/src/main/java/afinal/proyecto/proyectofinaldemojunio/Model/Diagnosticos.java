@@ -5,6 +5,7 @@ package afinal.proyecto.proyectofinaldemojunio.Model;
  */
 
 public class Diagnosticos {
+    int idDiagnostico;
     String nombre;
     String funciones;
     String condiciones;
@@ -31,5 +32,9 @@ public class Diagnosticos {
 
     public void setCondiciones(String condiciones) {
         this.condiciones = condiciones;
+    }
+
+    public int getIdDiagnostico() {
+        return idDiagnostico;
     }
 }

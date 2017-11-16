@@ -60,7 +60,7 @@ public class fragmentFunciones extends Fragment{
 
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.fragment_container, detallesFuncionesFragment, "detallesFuncionTag");
+                ft.replace(R.id.fragment_container, detallesFuncionesFragment, "detallesFuncionTag").addToBackStack("detallesFuncionTag");
                 ft.commit();
             }
         });
@@ -69,14 +69,13 @@ public class fragmentFunciones extends Fragment{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "¡No habilitado!", Toast.LENGTH_SHORT).show();
-                /*
+                //Toast.makeText(getActivity(), "¡No habilitado!", Toast.LENGTH_SHORT).show();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 datosFunciones fr = new datosFunciones();
                 fr.editarONuevo = 1;
                 ft.replace(R.id.fragment_container, fr, "detallesFuncionesTag");
                 ft.addToBackStack("detallesFuncionesTag");
-                ft.commit();*/
+                ft.commit();
             }
         });
 

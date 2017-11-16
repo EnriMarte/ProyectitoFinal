@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import afinal.proyecto.proyectofinaldemojunio.DB.HttpHandler;
+import afinal.proyecto.proyectofinaldemojunio.Fragments.Detalles.detallesUsuario;
 import afinal.proyecto.proyectofinaldemojunio.Fragments.NuevoEditar.datosUsuarios;
 import afinal.proyecto.proyectofinaldemojunio.MainActivity;
 import afinal.proyecto.proyectofinaldemojunio.Model.Usuario;
@@ -91,32 +92,22 @@ public class adapterUsuarios extends ArrayAdapter<Usuario> {
                     Usuario u = getItem(position);
 
                     FragmentTransaction ft = f.getFragmentManager().beginTransaction();
-                    datosUsuarios fr = new datosUsuarios();
+                    detallesUsuario fragment = new detallesUsuario();
+                    fragment.setUsuario(u);
+                    fragment.setEditando(true);
 
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("idUsuario", u.getIdUsuario());
-                    bundle.putString("nombre", u.getNombre());
-                    bundle.putString("apellido", u.getApellido());
-                    bundle.putInt("matricula", u.getMatricula());
-                    bundle.putString("hospital", u.getHospital());
-                    bundle.putInt("credencial", u.getIdCredencial());
-
-                    fr.setArguments(bundle);
-
-                    fr.editarONuevo = 0;
-                    ft.replace(R.id.fragment_container, fr, "datosUsuariosTag");
-                    ft.addToBackStack("datosUsuariosTag");
+                    ft.replace(R.id.fragment_container, fragment, "detallesUsuariosTag");
+                    ft.addToBackStack("detallesUsuariosTag");
                     ft.commit();
                 }
             });
         }
 
         ImageButton eliminar = (ImageButton)convertView.findViewById(R.id.deleteAbm);
-        if (eliminar != null) {
             eliminar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
+                    final AlertDialog.Builder alertDialog = new AlertDialog.Builder(activity);
                     alertDialog.setMessage("¿Está seguro que desea eliminar el usuario? Esta acción no se puede deshacer.");
                     alertDialog.setCancelable(true);
                     alertDialog.setTitle("Atención");
@@ -133,9 +124,8 @@ public class adapterUsuarios extends ArrayAdapter<Usuario> {
                     alertLogin.show();
                 }
             });
-        }
 
-    return convertView;
+        return convertView;
     }
 
     public void notifyDataChanged(List<Usuario> list){
@@ -158,13 +148,6 @@ public class adapterUsuarios extends ArrayAdapter<Usuario> {
                         .setTitle("¡Error de conexión! :(")
                         .setDuration(4000)
                         .setMessage("Error al contactar con el servidor, comprueba tu conexión a internet.")
-                        .setIcon(R.drawable.ic_cloud_off)
-                        .sneak(R.color.red);
-            } else if (s.equals("error2")) {
-                Sneaker.with(activity)
-                        .setTitle("¡Error de sesión! :(")
-                        .setDuration(4000)
-                        .setMessage("La sesión ha expirado, vuelva a iniciar sesión.")
                         .setIcon(R.drawable.ic_cloud_off)
                         .sneak(R.color.red);
             } else {
@@ -195,16 +178,12 @@ public class adapterUsuarios extends ArrayAdapter<Usuario> {
                     .post(requestBody)
                     .build();
 
-            if (new HttpHandler(activity).hasActiveInternetConnection()) {
-                try {
-                    Response response = client.newCall(request).execute();
-                    String resultado = response.body().string();
-                    return resultado;
-                } catch (Exception e) {
-                    Log.d("Debug", e.getMessage());
-                    return "error";
-                }
-            } else {
+            try {
+                Response response = client.newCall(request).execute();
+                String resultado = response.body().string();
+                return resultado;
+            } catch (Exception e) {
+                Log.d("Debug", e.getMessage());
                 return "error";
             }
         }

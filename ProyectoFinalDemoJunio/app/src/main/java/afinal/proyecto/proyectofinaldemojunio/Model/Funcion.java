@@ -10,7 +10,12 @@ public class Funcion {
     String nombre;
     String funcion;
     String condiciones;
+    int idFunciones;
 
+
+    public int getIdFunciones() {
+        return idFunciones;
+    }
     public String getNombre() {
         return nombre;
     }

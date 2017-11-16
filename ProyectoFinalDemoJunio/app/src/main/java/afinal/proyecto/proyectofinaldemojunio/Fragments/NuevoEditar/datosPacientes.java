@@ -44,8 +44,6 @@ public class datosPacientes extends Fragment{
         public View onCreateView(LayoutInflater inflater,
                                  @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-            Bundle bundle = getArguments();
-
             View view = inflater.inflate(R.layout.datos_pacientes, container, false);
 
             Button button = (Button)view.findViewById(R.id.botonNuevoPaciente);
@@ -54,49 +52,8 @@ public class datosPacientes extends Fragment{
             edad = (EditText) view.findViewById(R.id.editarEdadPaciente);
             altura = (EditText) view.findViewById(R.id.editarAlturaPaciente);
             tiposangre = (EditText) view.findViewById(R.id.editarTipoSangre);
-            sexo = (EditText) view.findViewById(R.id.editarAlturaPaciente);
+            sexo = (EditText) view.findViewById(R.id.editarSexoPaciente);
             peso = (EditText) view.findViewById(R.id.editarPesoPaciente);
-
-            if (editarONuevo == 0){
-                button.setText("Guardar cambios");
-                view.findViewById(R.id.txtUltimoEstudio).setVisibility(View.INVISIBLE);
-                view.findViewById(R.id.txtUltimoEstudioFecha).setVisibility(View.INVISIBLE);
-
-                if (bundle.getString("nombre") != null && bundle.getString("nombre").length() > 0)
-                    nombre.setText(bundle.getString("nombre"));
-                else
-                    nombre.setText("Indefinido");
-
-                if (bundle.getString("apellido") != null && bundle.getString("nombre").length() > 0)
-                    apellido.setText(bundle.getString("apellido"));
-                else
-                    apellido.setText("Indefinido");
-
-                if (Integer.toString(bundle.getInt("edad")) != null && Integer.toString(bundle.getInt("edad")).length() > 0)
-                    edad.setText(Integer.toString(bundle.getInt("edad")));
-                else
-                    edad.setText("Indefinido");
-
-                if (sexo.getText().toString() != null && sexo.getText().toString().length() > 0)
-                    sexo.setText(bundle.getString("sexo"));
-                else
-                    sexo.setText("Indefinido");
-
-                if (Double.toString(bundle.getDouble("peso")) != null && Double.toString(bundle.getDouble("peso")).length() > 0)
-                    peso.setText(Double.toString(bundle.getDouble("peso")));
-                else
-                    peso.setText("Indefinido");
-
-                if (Double.toString(bundle.getDouble("altura")) != null && Double.toString(bundle.getDouble("peso")).length() > 0)
-                    altura.setText(Double.toString(bundle.getDouble("altura")));
-                else
-                    altura.setText("Indefinido");
-
-                if (bundle.getString("tipoSangre") != null && bundle.getString("nombre").length() > 0)
-                    tiposangre.setText(bundle.getString("tipoSangre"));
-                else
-                    tiposangre.setText("Indefinido");
-            }
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -111,9 +68,9 @@ public class datosPacientes extends Fragment{
                                 .sneak(R.color.colorAccent);
                     }else{
                         insertarPaciente(new String[]{ nombre.getText().toString(),
-                                apellido.getText().toString(), edad.getText().toString(),
-                                sexo.getText().toString(), peso.getText().toString(),
-                                altura.getText().toString(), tiposangre.getText().toString()});
+                                apellido.getText().toString(), sexo.getText().toString(),
+                                altura.getText().toString(), edad.getText().toString(),
+                                peso.getText().toString(), tiposangre.getText().toString()});
                     }
                 }
             });
@@ -139,16 +96,6 @@ public class datosPacientes extends Fragment{
                         .setDuration(4000)
                         .setHeight(95)
                         .setMessage("Error al contactar con el servidor, comprueba tu conexión a internet.")
-                        .setIcon(R.drawable.ic_cloud_off)
-                        .sneak(R.color.red);
-            } else if (datos.equals("error2")) {
-                // El token está mal, asi que a borrarloo y que vuelva al inicio
-                //Toast.makeText(getActivity(), "Sesión expirada, vuelve a iniciar sesion.", Toast.LENGTH_SHORT).show();
-                Sneaker.with(getActivity())
-                        .setTitle("¡Error de sesión! :(")
-                        .setHeight(95)
-                        .setDuration(4000)
-                        .setMessage("La sesión ha expirado, vuelva a iniciar sesión.")
                         .setIcon(R.drawable.ic_cloud_off)
                         .sneak(R.color.red);
             } else if (datos.equals("faltanDatos")) {
@@ -194,11 +141,13 @@ public class datosPacientes extends Fragment{
                             .setType(MultipartBody.FORM)
                             .addFormDataPart("nombre", parametros[0])
                             .addFormDataPart("apellido", parametros[1])
-                            .addFormDataPart("edad", parametros[2])
-                            .addFormDataPart("sexo", parametros[3])
-                            .addFormDataPart("peso", parametros[4])
-                            .addFormDataPart("altura", parametros[5])
+                            .addFormDataPart("sexo", parametros[2])
+                            .addFormDataPart("altura", parametros[3])
+                            .addFormDataPart("edad", parametros[4])
+                            .addFormDataPart("peso", parametros[5])
                             .addFormDataPart("tipoSangre", parametros[6])
+                            .addFormDataPart("medicoCabecera", "0")
+                            .addFormDataPart("ultimoEstudio", "2017-01-01")
                             .build();
 
                     listoParaAgregar = true;
