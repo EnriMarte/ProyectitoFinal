@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editarNombreUsuario"
+                android:maxLength="200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido"
+                android:layout_marginStart="30dp"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editarApellidoUsuario"
+                android:maxLength="200"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matrícula"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:id="@+id/editarMatriculaUsuario"
+                android:maxLength="200"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospital"
+                android:layout_marginStart="25dp"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:id="@+id/editarHospitalUsuario"
+                android:maxLength="200"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credencial"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:id="@+id/editarCredencialUsuario"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Último inicio de sesión: "
+                android:id="@+id/ultimoLoginUsuario"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Aún no ha iniciado"
+                android:id="@+id/txtUltimoLoginUsuario"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:id="@+id/botonNuevoUsuario"
+            android:text="agregar nuevo"
+            android:fontFamily="fontFamily: sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="right"
+            android:background="@color/colorAccent"/>
+
+    </LinearLayout>
+</LinearLayout>

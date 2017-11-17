@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "afinal.proyecto.proyectofinaldemojunio"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //compile 'com.android.support:appcompat-v7:25.3.1'
+    //Librería del bottomBar
+    compile 'com.roughike:bottom-bar:2.3.1'
+    //Librería de los roundImageView
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //Librería del roundMenu
+    compile 'com.github.Hitomis:CircleMenu:v1.0.2'
+    //Librería del sneaker
+    compile 'com.irozon.sneaker:sneaker:1.0.1'
+    //Librería de DB
+    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    //Librería de conexión
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    //Librería del GSON raro
+    compile 'com.google.code.gson:gson:2.4'
+    //Librería de Google Services, para el OCR
+    compile 'com.google.android.gms:play-services-vision:9.8.0'
+    //Forzar uso de la misma librería gráfica para evitar errores. ¿Funciona? Perhaps.
+    testCompile 'junit:junit:4.12'
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '25.3.1'
+                }
+            }
+        }
+    }
+    compile files('libs/bsh-2.0b4.jar')
+}

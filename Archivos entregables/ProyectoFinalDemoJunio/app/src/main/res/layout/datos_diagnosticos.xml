@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del diagnós."
+            android:layout_marginEnd="15dp"/>
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nombreDiagnostico"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Funciones dependientes"
+        android:layout_marginBottom="15dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/list_funciones" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:id="@+id/botonNuevoDiagnostico"
+        android:text="continuar"
+        android:fontFamily="fontFamily: sans-serif-thin"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="bottom|end"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>

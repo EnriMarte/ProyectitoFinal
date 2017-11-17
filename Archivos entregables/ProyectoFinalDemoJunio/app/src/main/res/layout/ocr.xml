@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:id="@+id/surface_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:text="Encuadra el texto y espera a que enfoque"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:layout_toLeftOf="@+id/stopOCR"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"/>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Detener"
+        android:id="@+id/stopOCR"
+
+        />
+</RelativeLayout>
